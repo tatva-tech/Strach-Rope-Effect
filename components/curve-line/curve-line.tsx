@@ -48,7 +48,7 @@ const CurveLine = () => {
     const animateOut = () => {
         const newProgress = progress * Math.sin(time);
         progress = lerp(progress, 0, 0.025);
-        time += 0.2;
+        time += 0.1;
         setPath(newProgress);
         if (Math.abs(progress) > 0.75) {
             reqId = requestAnimationFrame(animateOut);
@@ -59,7 +59,7 @@ const CurveLine = () => {
     }
 
     const resetAnimation = () => {
-        time = Math.PI / 100;
+        time = Math.PI / 2;
         progress = 0;
     }
 
